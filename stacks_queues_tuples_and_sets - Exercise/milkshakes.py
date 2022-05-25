@@ -1,3 +1,11 @@
+# You are learning how to make milkshakes.
+# First, you will be given two sequences of integers representing chocolates and cups of milk.
+# You have to start from the last chocolate and try to match it with the first cup of milk. If their values are equal, you should make a milkshake and remove both 
+# ingredients. Otherwise, you should move the cup of milk at the end of the sequence and decrease the value of the chocolate by 5 without moving it from its position.
+# If any of the values are equal to or below 0, you should remove them from the records right before mixing them with the other ingredient.
+# When you successfully prepare 5 chocolate milkshakes, or you have no more chocolate or cups of milk left, you need to stop making chocolate milkshakes.
+
+
 from collections import deque
 
 chocolate_package = [int(x) for x in input().split(', ')]
