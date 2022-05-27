@@ -1,3 +1,11 @@
+# You will be given a square matrix of integers, each integer separated by a single space, and each row will be on a new line. On the last line of input, 
+# you will receive indexes - coordinates of several cells separated by a single space, in the following format: "{row1},{column1} {row2},{column2} … {row3},{column3}".
+# On those cells, there are bombs. You must detonate every bomb in the order they were given. When a bomb explodes, it deals damage equal to its integer value to 
+# all the cells around it (in every direction and in all diagonals). One bomb can't explode more than once, and after it does, its value becomes 0. 
+# When a cell's value reaches 0 or below, it dies. Dead cells can't explode.
+# You must print the count of all alive cells and their sum. Afterward, print the matrix with all its cells (including the dead ones).
+
+
 def get_children(matrix, row, col):
     possible_children_cords = [
         [row - 1, col - 1],
