@@ -1,3 +1,17 @@
+# Alice is going to the mad tea party, to see her friends. On the way to the party, she needs to collect bags of tea.
+# You will be given an integer n for the size of the Wonderland territory with a square shape. On the following n lines, you will receive the rows of the territory:
+# •	Alice will be placed in a random position, marked with the letter "A". 
+# •	On the territory, there will be bags of tea, represented as numbers. If Alice steps on a number position, she collects the tea bags and increases the quantity
+# with the corresponding number.
+# •	There will always be one rabbit hole on the territory marked with the letter "R".
+# •	All of the empty positions will be marked with ".".
+# After the field state, you will be given commands for Alice's movements. Move commands can be: "up", "down", "left" or "right".
+# When Alice collects at least 10 bags of tea, she is ready to go to the tea party, and she does not need to continue collecting. Otherwise, if she steps on the 
+# rabbit hole or goes out of the territory, she can't return, and the program ends. 
+# In the end, the path she walked had to be marked with '*'.
+# For more clarifications, see the examples below.
+
+
 def get_next_post(row, col, direction):
     if direction == 'up':
         return row - 1, col
