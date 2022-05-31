@@ -1,8 +1,13 @@
+# Write a function called multiply that can receive any quantity of numbers (integers) as different parameters and returns the result of the multiplication of all of them. 
+# Submit only your function in the Judge system.
+
 def multiply(*args):
     product = 1
     for value in args:
         product *= value
     return product
+
+# test_output
 
 print(multiply(1, 4, 5))
 print(multiply(4, 5, 6, 1, 3))
