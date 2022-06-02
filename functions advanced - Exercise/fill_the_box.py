@@ -1,3 +1,12 @@
+# Write a function called fill_the_box that receives a different number of arguments representing:
+# •	the height of a box
+# •	the length of a box
+# •	the width of a box
+# •	n-times a different number of cubes with exact size 1 x 1 x 1
+# •	a string "Finish"
+# Your task is to fill the box with the given cubes until the current argument equals "Finish".
+
+
 def fill_the_box(h, l, w, *args):
     volume = h * l * w
     cubes = args[:args.index('Finish')]
