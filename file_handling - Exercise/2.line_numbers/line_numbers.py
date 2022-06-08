@@ -1,3 +1,12 @@
+# Write a program that reads a text file, inserts line numbers in front of each line, and counts all the letters and punctuation marks. 
+# The result should be written to another text file. 
+
+# Input text:
+# -I was quick to judge him, but it wasn't his fault.
+# -Is this some kind of joke?! Is it?
+# -Quick, hide here. It is safer.
+
+
 from string import punctuation
 
 def count_symbol(line):
