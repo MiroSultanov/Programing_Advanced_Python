@@ -1,3 +1,16 @@
+# •	A player wins when he/she connects four slots.
+# •	The winning connected slots must be consecutive
+# •	A connection can be
+# o	Horizontal
+# o	Vertical
+# o	Diagonal
+
+# •	Try writing validation logic for:
+# o	More than one player
+# o	Reset logic
+# •	Try adding error messages for invalid column
+
+
 def build_initial_field(rows_count, columns_count):
     return [[None] * columns_count for _ in range(rows_count)]
 
@@ -106,163 +119,3 @@ def play(field):
 
 field = build_initial_field(6, 7)
 play(field)
-
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,  # player
-#         5,  # player row
-#         0,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [1, 1, 1, 1, 0, 0, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,  # player
-#         5,  # player row
-#         1,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [1, 1, 1, 1, 0, 0, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         5,  # player row
-#         2,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [1, 2, 1, 1, 1, 1, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         5,  # player row
-#         3,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [1, 2, 1, 1, 1, 1, 0],
-#         ]
-#     ))
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         1,  # player row
-#         2,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [1, 2, 2, 1, 1, 1, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         3,  # player row
-#         2,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [1, 2, 2, 1, 1, 1, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         5,  # player row
-#         0,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 1, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 1, 0, 0, 0, 0, 0],
-#             [1, 0, 0, 0, 0, 0, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         3,  # player row
-#         2,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [0, 0, 0, 1, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 1, 0, 0, 0, 0, 0],
-#             [1, 0, 0, 0, 0, 0, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         1,  # player row
-#         0,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [1, 0, 0, 0, 0, 0, 0],
-#             [0, 1, 0, 1, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 0, 1, 0, 0, 0],
-#             [1, 0, 0, 0, 2, 0, 0],
-#         ]
-#     ))
-#
-# print(
-#     True,
-#     is_win_condition(
-#         1,
-#         2,  # player row
-#         3,  # player column
-#         [
-#             [0, 0, 0, 0, 0, 0, 0],
-#             [1, 0, 0, 0, 0, 0, 0],
-#             [0, 1, 0, 1, 0, 0, 0],
-#             [0, 0, 1, 0, 0, 0, 0],
-#             [0, 0, 0, 1, 0, 0, 0],
-#             [1, 0, 0, 0, 2, 0, 0],
-#         ]
-#     ))
