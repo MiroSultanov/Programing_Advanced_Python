@@ -1,3 +1,10 @@
+# •	Try writing validation logic for:
+# o	The signs can only be "X" and "O"
+# o	The users can only choose from the numbers 1 to 9
+# o	The users can only choose a free space
+# •	Try adding error messages for those validations
+
+
 def read_players():
     player_one_name = input('Player one name: ')
     player_two_name = input('Player two name: ')
