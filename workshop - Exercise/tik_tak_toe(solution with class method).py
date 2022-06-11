@@ -1,3 +1,10 @@
+# •	Try writing validation logic for:
+# o	The signs can only be "X" and "O"
+# o	The users can only choose from the numbers 1 to 9
+# o	The users can only choose a free space
+# •	Try adding error messages for those validations
+
+
 class Player:
     def __init__(self, name, sign):
         self.name = name
