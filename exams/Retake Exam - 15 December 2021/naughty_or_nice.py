@@ -1,3 +1,28 @@
+# Santa Claus is always watching and seeing if children are good or bad. Only the nice children get Christmas presents, so Santa Claus is preparing his list this 
+# year to check which child has been good or bad.
+# Write a function called naughty_or_nice_list which will receive
+# •	A list representing Santa Claus' "Naughty or Nice" list full of kids' names
+# •	A different number of arguments (strings) and/or keywords representing commands
+# The function should sort the kids in the given Santa Claus list into 3 lists: "Nice", "Naughty", and "Not found".
+# The list holds a different number of kids - tuples containing two elements: a counting number (integer) at the first position and a name (string) at the second 
+#     position. 
+# For example: [(3, "Amy"), (1, "Tom"), (7, "George"), (3, "Katy")].
+# Next, the function could receive arguments and/or keywords. 
+# Each argument is a command. The commands could be the following:
+# •	"{counting_number}-Naughty" - if there is only one tuple in the given list with the same number, MOVE the kid to a list with NAUGHTY kids and remove it from 
+# the Santa list. Otherwise, ignore the command.
+# •	"{counting_number}-Nice" - if there is only one tuple in the given list with the same number, MOVE the kid to a list with NICE kids and remove it from the 
+# Santa list. Otherwise, ignore the command.
+# Each keyword holds a key with a name (string), and each value will be a string ("Naughty" or "Nice"): 
+# •	If there is only one tuple with the same name, MOVE the kid to a list with NAUGHTY or to the list with NICE kids depending on the value in the keyword. 
+# Then, remove it from the Santa list.
+# •	Otherwise, ignore the command.
+# All remaining tuples in the given Santa's list are not found kids, and they should be MOVED to the "Not found" list.
+# In the end, return the final lists, each on a new line as described below.
+# Note: Submit only the function in the judge system
+
+
+
 def naughty_or_nice_list(*args, **kwargs):
     santas_dict = {"Nice": [], "Naughty": [], "Not found": []}
 
