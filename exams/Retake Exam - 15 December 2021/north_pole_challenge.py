@@ -1,3 +1,16 @@
+# You are visiting Santa Claus' workshop, and it is complete chaos. You will need to help Santa find all items scattered around the workshop.
+# You will be given the size of the matrix in the format "{rows}, {columns}". It is the Santa's workshop represented as some symbols separated by a single space:
+# •	Your position is marked with the symbol "Y"
+# •	Christmas decorations are marked with the symbol "D"
+# •	Gifts are marked with the symbol "G"
+# •	Cookies are marked with the symbol "C"
+# •	All of the empty positions will be marked with "."
+# After the field state, you will be given commands until you receive the command "End". The commands will be in the format "right/left/up/down-{steps}".
+# You should move in the given direction with the given steps and collect all the items that come across. If you go out of the field, you should continue to
+# traverse the field from the opposite side in the same direction. You should mark your path with "x". Your current position should always be marked with "Y".
+# Keep track of all collected items. If you've collected all items at any point, end the program and print: "Merry Christmas!".
+
+
 def validate_cell(direction, row, col):
     if direction == 'up':
         return row - 1, col
