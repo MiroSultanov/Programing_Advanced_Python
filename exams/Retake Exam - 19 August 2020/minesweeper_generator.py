@@ -1,3 +1,8 @@
+# You will be given an integer n for the size of the mines field with square shape and another one for the number of bombs that you have to place in the field. 
+# On the next n lines, you will receive the position for each bomb. Your task is to create the game field placing the bombs at the correct positions and mark them 
+# with "*", and calculate the numbers in each cell of the field. Each cell represents a number of all bombs directly near it (up, down, left, right and the 4 diagonals).
+
+
 def set_cell(cell: tuple, value: str) -> None:
     global matrix
     i, j = cell
